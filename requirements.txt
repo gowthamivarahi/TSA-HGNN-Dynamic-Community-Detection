@@ -1,120 +1,25 @@
-TSA-HGNN: A Stability-Aware Multi-Scale Temporal Graph Neural Network for Dynamic Community Detection
-=====================================================================================================
+# TSA-HGNN: Requirements
+# Tested with Python 3.9.16 on Ubuntu 24.04
 
-REQUIREMENTS AND EXPERIMENTAL SETUP
-=====================================================================================================
+# Core deep learning
+torch>=2.0.1
+torch-geometric>=2.3.1
 
-PYTHON VERSION
---------------
-Python 3.9 or higher
-
-
-CORE DEPENDENCIES
------------------
-torch>=2.0.0
-torch-geometric>=2.3.0
-torch-scatter
-torch-sparse
-torch-cluster
-numpy>=1.24.0
+# Scientific computing
+numpy>=1.24.3
 scipy>=1.10.0
-networkx>=3.0
-pandas>=2.0.0
-scikit-learn>=1.2.0
-matplotlib>=3.7.0
+
+# Machine learning
+scikit-learn>=1.2.2
+
+# Graph processing
+networkx>=2.8.8
+
+# Data handling
+pandas>=1.5.3
+
+# Visualization (optional)
+matplotlib>=3.7.1
+
+# Utilities
 tqdm>=4.65.0
-
-
-INSTALLATION
-------------
-1. Clone the repository:
-   git clone https://github.com/gowthamivarahi/Dynamic-Community-Detection
-   cd Dynamic-Community-Detection
-
-2. (Optional) Create a virtual environment:
-   python -m venv venv
-   source venv/bin/activate        (Linux/macOS)
-   venv\Scripts\activate.bat       (Windows)
-
-3. Install dependencies:
-   pip install -r requirements.txt
-
-For GPU support, install the CUDA-compatible version of PyTorch from:
-https://pytorch.org/get-started/locally/
-
-
-HARDWARE REQUIREMENTS
----------------------
-Minimum:
-  - CPU: 4-core processor
-  - RAM: 16 GB
-  - Storage: 10 GB free space
-  - GPU: Optional (CPU-only mode supported)
-
-Recommended (for full benchmark experiments):
-  - CPU: Intel Core i9 or equivalent (8+ cores)
-  - RAM: 64 GB
-  - GPU: NVIDIA RTX 4090 or equivalent (24 GB VRAM)
-  - CUDA: 12.1 with cuDNN 8.9
-  - OS: Ubuntu 22.04 LTS
-
-
-OPERATING SYSTEM
-----------------
-Tested on:
-  - Ubuntu 22.04 LTS
-  - Windows 10/11
-  - macOS 13+
-
-
-DATASET FORMAT
---------------
-Input: Comma-separated edge list (.csv) with columns:
-  source, target, timestamp
-
-Supported benchmark datasets:
-  - DBLP-5 (temporal co-authorship network)
-  - Enron Email (corporate email communication network)
-  - UCI Message (online social network)
-  - Bitcoin-OTC (trust network with timestamps)
-
-Place dataset files in the data/ directory before running.
-
-
-HYPERPARAMETERS (Default Configuration)
-----------------------------------------
-Hidden dimension         : 128
-GraphSAGE layers         : 2
-TCN kernel size          : 3
-TCN dilation factors     : 1, 2, 4
-Informer attention heads : 8
-ESN reservoir size       : 256
-ESN spectral radius      : 0.95
-ESN sparsity             : 0.1
-Stability weight (lambda): 0.5
-Dropout rate             : 0.3
-Optimizer                : Adam
-Learning rate            : 0.001
-Weight decay             : 0.0005
-Batch size               : 8
-Training epochs          : 200
-Early stopping patience  : 20
-Random seed              : 42
-
-
-REPRODUCIBILITY
----------------
-All experiments use a fixed global seed (seed=42) applied to:
-  - Python random module
-  - NumPy
-  - PyTorch (including CUDA deterministic mode)
-
-
-CODE AVAILABILITY
------------------
-Repository: https://github.com/gowthamivarahi/Dynamic-Community-Detection
-
-Files:
-  - tsa_hgnn.py                    : Main model implementation with runnable example
-  - dynamic_graph_construction.py  : Graph snapshot construction from edge list
-  - requirements.txt               : Dependency list
