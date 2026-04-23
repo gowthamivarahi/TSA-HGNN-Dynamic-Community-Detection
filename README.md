@@ -5,11 +5,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> **Official implementation of "TSA-HGNN: A Stability-Aware Multi-Scale Temporal Graph Neural Network for Dynamic Community Detection"**
->
-> *Gowthami Vusirikkayala and Madhu Viswanatham V*  
-> *School of Computer Science and Engineering, Vellore Institute of Technology, Vellore, India*  
-> *Published in Frontiers in Artificial Intelligence, 2026*
+
 
 ---
 
@@ -395,51 +391,5 @@ See [`config/default_config.py`](config/default_config.py) for full configuratio
 
 ---
 
-## 📝 Citation
 
-If you use this code or find our work helpful, please cite:
 
-```bibtex
-@article{Vusirikkayala2026TSAHGNN,
-  author    = {Vusirikkayala, Gowthami and Viswanatham V, Madhu},
-  title     = {{TSA-HGNN}: A Stability-Aware Multi-Scale Temporal Graph
-               Neural Network for Dynamic Community Detection},
-  journal   = {Frontiers in Artificial Intelligence},
-  year      = {2026},
-  volume    = {},
-  pages     = {},
-  doi       = {},
-  url       = {https://github.com/gowthamivarahi/Dynamic-Community-Detection}
-}
-```
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
-
----
-
-## 👥 Contact
-
-**Authors:**
-- **Gowthami Vusirikkayala** — VIT Vellore
-- **Madhu Viswanatham V** (Corresponding Author) — vmadhuviswanatham@vit.ac.in
-
-**Questions or Issues?**
-- 📧 Email: vmadhuviswanatham@vit.ac.in
-- 🐛 GitHub Issues: [Open an issue](https://github.com/gowthamivarahi/Dynamic-Community-Detection/issues)
-- 📄 Paper: [Frontiers in AI](https://www.frontiersin.org/journals/artificial-intelligence)
-
----
-
-## 🙏 Acknowledgments
-
-This work was supported by the School of Computer Science and Engineering, Vellore Institute of Technology, Vellore, India.
-
----
-
-<p align="center">
-  <strong>⭐ Star this repository if you find it useful!</strong>
-</p>
